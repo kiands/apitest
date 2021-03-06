@@ -66,7 +66,7 @@ Route::patch('/counter', function (Request $request) {
 })->middleware('api');
 
 Route::post('/gps/create',function (Request $request) {
-	$data = 6;
+	$data = ['records' => $request->get('records')];
 	$records = App\Record::create($data);
-	return $record;
+	return $records;
 })->middleware('api');
