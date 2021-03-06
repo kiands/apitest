@@ -16,6 +16,7 @@ class Records extends Migration
         Schema::create('records', function (Blueprint $table) {
             $table->increments('id');
             $table->longText('records');
+            $table->integer('completed');
             $table->timestamps();
         });
     }
