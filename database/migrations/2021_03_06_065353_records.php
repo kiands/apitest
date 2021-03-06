@@ -13,7 +13,11 @@ class Records extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('records', function (Blueprint $table) {
+            $table->increments('id');
+            $table->longText('records');
+            $table->timestamps();
+        });
     }
 
     /**
